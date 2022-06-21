@@ -1,53 +1,14 @@
 /* eslint-disable */
-import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
 
 function App() {
-  let [a, astate] = useState(['남자코트 추천', '강남 맛집추천', '파이썬독학']);
-  let [good, goodstate] = useState(0);
   return (
-    <div className="App">
-      <div className='nav'>
-        <h4>ReactBlog</h4>
-      </div>
-      <div className='list'>
-        <h4>{a[0]} <span onClick={()=>{goodstate(good+1)}}>👍</span> {good}</h4>
-        <p>2월 17일 발행</p>
-      </div>
-      <div className='list'>
-        <h4>{a[1]}</h4>
-        <p>2월 17일 발행</p>
-      </div>
-      <div className='list'>
-        <h4>{a[2]}</h4>
-        <p>2월 17일 발행</p>
-      </div>
-      <Modal></Modal>
-      <div>
-        <span onClick={()=>{
-          let copied = [...a];
-          copied[0] = '여자코트 추천';
-          astate(copied);
-          }}> 버튼</span>
-      </div>
-      <button onClick={()=>{
-        let list = [...a];
-        list = list.sort();
-        astate(list);
-      }}>
-        가나다정렬
-      </button>
+    <div>
+    <div className='Nav'><p>TEST</p></div>
+    <p id='p'>서버와의 데이터 통신과는 별개로 DOM을 직접적으로 조작해야하는 기존의 웹 화면 개발 방식과 달리, React는 DOM을 직접적으로 조작하지 않고 데이터가 변화할 때 변경사항이 적용된 Virtual DOM을 만든다. 그 다음 실제 DOM과 Virtual DOM의 차이점을 비교하고, 변경된 부분을 실제 DOM에 적용한다.
+    </p>
     </div>
   );
-}
-function Modal(a){
-  return (
-    <div className='list'>
-      <h4>{a[0]}</h4>
-      <p>내용</p>
-    </div>
-  )
 }
 
 export default App;
